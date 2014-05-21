@@ -8,7 +8,7 @@ categories:
 
 Here I will try to aggregate most of the sources I've used to learn iOS / Objective-C Programming:
 
-In a future post I'll post about coding conventions & guidelines for Objective-C/Cocoa.
+Soon I'll post about coding conventions & guidelines for Objective-C/Cocoa.
 
 
 - Programming Fundamentals:
