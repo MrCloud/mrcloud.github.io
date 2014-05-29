@@ -54,8 +54,6 @@ Soon I'll post about coding conventions & guidelines for Objective-C/Cocoa.
 
   - http://mattgemmell.com
 
-  - http://iphonedevelopment.blogspot.fr
-
   - http://doing-it-wrong.mikeweller.com
 
   - http://developers.enormego.com
