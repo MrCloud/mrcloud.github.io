@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Objective-C | MrCloud's Blog]]></title>
   <link href="http://MrCloud.github.io/blog/categories/objective-c/atom.xml" rel="self"/>
   <link href="http://MrCloud.github.io/"/>
-  <updated>2014-05-31T14:22:21+02:00</updated>
+  <updated>2014-05-31T14:33:39+02:00</updated>
   <id>http://MrCloud.github.io/</id>
   <author>
     <name><![CDATA[MrCloud]]></name>
@@ -14,12 +14,12 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Objective-C-Style-Guide]]></title>
+    <title type="html"><![CDATA[Objective-C Style Guide]]></title>
     <link href="http://MrCloud.github.io/blog/2014/05/29/objective-c-style-guide/"/>
     <updated>2014-05-29T22:00:37+02:00</updated>
     <id>http://MrCloud.github.io/blog/2014/05/29/objective-c-style-guide</id>
-    <content type="html"><![CDATA[<p>Hi, this post sums up the coding and naming conventions I adopted developing
-for Apple platforms.</p>
+    <content type="html"><![CDATA[<p>Hi, this post sums up the coding and naming conventions I&rsquo;m using to develop for
+Apple platforms.</p>
 
 <hr />
 
@@ -67,6 +67,9 @@ for Apple platforms.</p>
 <li><a href="#imports">Imports</a></li>
 <li><a href="#xcode-project">Xcode Project</a></li>
 </ul>
+
+
+<!--more-->
 
 
 <h2><a name="language"></a>Language</h2>
