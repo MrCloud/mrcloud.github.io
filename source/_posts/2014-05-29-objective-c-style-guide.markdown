@@ -6,15 +6,8 @@ comments: true
 categories: Objective-C
 ---
 
-Hi, this post sums up the coding and naming conventions I adopted developping
+Hi, this post sums up the coding and naming conventions I adopted developing
 for Apple platforms.
-
-Dot Notation:
-
-Dot notation should be used aMRCime for declared properties or Accessor/Mutator
-kind of methods. Bracket notation is preferred in all other instances.
-
-// example + case of frame.size.width ...
 
 ---
 ## Table of Contents
@@ -57,6 +50,7 @@ maintain coherence with Cocoa and third party Framework naming.
 UIColor *myColor = [UIColor whiteColor];
 ```
 
+
 **Not Preferred:**
 ```objc
 UIColor *myColour = [UIColor whiteColor];
@@ -71,7 +65,6 @@ answer += 9;
 answer++;
 answer = 40 + 2;
 ```
-
 The `++`, `--`, etc are preferred to be after the variable instead of before to
 be consistent with other operators. Operators separated should always be
 surrounded by spaces unless there is only one operand.
@@ -794,7 +787,7 @@ When coding with conditionals, the left hand margin of the code should be the
 ```objc
 - (void)someMethod {
   if (![someOther boolValue]) {
-	return;
+  return;
   }
 
   //Do something important

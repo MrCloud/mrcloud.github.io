@@ -3,7 +3,7 @@ layout: post
 title: "Learning Objective-C"
 date: 2014-05-20 21:08:05 +0200
 comments: true
-categories:Objective-C iOS
+categories: Objective-C iOS
 ---
 
 Here I will try to aggregate most of the sources I've used to learn iOS / Objective-C Programming:
