@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Objective-C-Style-Guide"
+title: "Objective-C Style Guide"
 date: 2014-05-29 22:00:37 +0200
 comments: true
 categories: Objective-C
 ---
 
-Hi, this post sums up the coding and naming conventions I adopted developing
-for Apple platforms.
+Hi, this post sums up the coding and naming conventions I'm using to develop for
+Apple platforms.
 
 ---
 ## Table of Contents
@@ -45,6 +45,7 @@ for Apple platforms.
 * [Imports](#imports)
 * [Xcode Project](#xcode-project)
 
+<!--more-->
 
 ## <a name="language"></a>Language
 
