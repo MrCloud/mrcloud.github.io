@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: iOS | MrCloud's Blog]]></title>
+  <link href="http://MrCloud.github.io/blog/categories/ios/atom.xml" rel="self"/>
+  <link href="http://MrCloud.github.io/"/>
+  <updated>2014-05-31T15:42:31+02:00</updated>
+  <id>http://MrCloud.github.io/</id>
+  <author>
+    <name><![CDATA[MrCloud]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Objective-C]]></title>
+    <link href="http://MrCloud.github.io/blog/2014/05/20/learning-objective-c/"/>
+    <updated>2014-05-20T21:08:05+02:00</updated>
+    <id>http://MrCloud.github.io/blog/2014/05/20/learning-objective-c</id>
+    <content type="html"><![CDATA[<p>Here I will try to aggregate most of the sources I&rsquo;ve used to learn iOS / Objective-C Programming:</p>
+
+<p>Soon I&rsquo;ll post about coding conventions &amp; guidelines for Objective-C/Cocoa.</p>
+
+<ul>
+<li>Programming Fundamentals:
+
+<ul>
+<li>Programming with Objective-C <a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html">Developer Library</a>]</li>
+<li>Object-Oriented Programming with Objective-C [<a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=409922309">iBooks</a>] [<a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/OOP_ObjC/Introduction/Introduction.html">Developer Library</a>]</li>
+<li>Concepts in Objective-C Programming [<a href="https://developer.apple.com/library/ios/documentation/General/Conceptual/CocoaEncyclopedia/Introduction/Introduction.html">Developer Library</a>]</li>
+<li>[Outdated] The Objective-C Programming Language [<a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=409922308">iBooks</a>] [<a href="https://developer.apple.com/legacy/library/documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html">Developer Library</a>]</li>
+<li>[Outdated] Cocoa Fundamentals Guide [<a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=409921412">iBooks</a>] [<a href="https://developer.apple.com/legacy/library/documentation/Cocoa/Conceptual/CocoaFundamentals/Introduction/Introduction.html">Developer Library</a>]</li>
+</ul>
+</li>
+</ul>
+
+
+<br/>
+
+
+<ul>
+<li>iOS App Programming:
+
+<ul>
+<li>Start Developing iOS Apps Today [<a href="https://developer.apple.com/library/ios/referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343">Developer Library</a>]</li>
+<li>iOS Technology Overview [<a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=409921432">iBooks</a>] [<a href="https://developer.apple.com/library/ios/documentation/Miscellaneous/Conceptual/iPhoneOSTechOverview/Introduction/Introduction.html">Developer Library</a>]</li>
+<li>iOS App Programming Guide [<a href="https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html">Developer Library</a>]</li>
+<li>View Controller Programming Guide for iOS [<a href="https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/Introduction/Introduction.html">Developer Library</a>]</li>
+<li>View Programming Guide for iOS [<a href="https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/Introduction/Introduction.html">Developer Library</a>]</li>
+</ul>
+</li>
+</ul>
+
+
+<br/>
+
+
+<ul>
+<li>Human Interface Guidelines:
+
+<ul>
+<li>iOS Human Interface Guidelines [<a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html">Developer Library</a>]</li>
+<li>iOS 7 Design Resources [<a href="https://developer.apple.com/library/ios/design/index.html">Developer Library</a>]</li>
+<li>User Experience Starting Point for iOS [<a href="https://developer.apple.com/library/ios/referencelibrary/GettingStarted/GS_UserExperience_iPhone/index.html">Developer Library</a>]</li>
+</ul>
+</li>
+</ul>
+
+
+<br/>
+
+
+<ul>
+<li>Controls repository:
+
+<ul>
+<li><a href="https://www.cocoacontrols.com">https://www.cocoacontrols.com</a></li>
+</ul>
+</li>
+</ul>
+
+
+<br/>
+
+
+<ul>
+<li>Open source libraries:
+
+<ul>
+<li><a href="http://cocoapods.org">http://cocoapods.org</a></li>
+</ul>
+</li>
+</ul>
+
+
+<br/>
+
+
+<ul>
+<li>Blogs:
+
+<ul>
+<li><p><a href="http://cocoadevcentral.com">http://cocoadevcentral.com</a></p></li>
+<li><p><a href="http://nshipster.com">http://nshipster.com</a></p></li>
+<li><p><a href="http://www.cimgf.com">http://www.cimgf.com</a></p></li>
+<li><p><a href="http://www.raywenderlich.com">http://www.raywenderlich.com</a></p></li>
+<li><p><a href="http://cocoasamurai.blogspot.fr">http://cocoasamurai.blogspot.fr</a></p></li>
+<li><p><a href="http://objectivistc.tumblr.com">http://objectivistc.tumblr.com</a></p></li>
+<li><p><a href="https://www.mikeash.com/pyblog/">https://www.mikeash.com/pyblog/</a></p></li>
+<li><p><a href="http://mattgemmell.com">http://mattgemmell.com</a></p></li>
+<li><p><a href="http://doing-it-wrong.mikeweller.com">http://doing-it-wrong.mikeweller.com</a></p></li>
+<li><p><a href="http://developers.enormego.com">http://developers.enormego.com</a></p></li>
+<li><p><a href="http://www.cocoanetics.com">http://www.cocoanetics.com</a></p></li>
+<li><p><a href="http://cocoaintheshell.com">http://cocoaintheshell.com</a></p></li>
+<li><p><a href="http://subjc.com">http://subjc.com</a></p></li>
+<li><p><a href="http://www.objc.io">http://www.objc.io</a></p></li>
+<li><p><a href="http://ideveloper.co">http://ideveloper.co</a></p></li>
+<li><p><a href="http://toxicsoftware.com">http://toxicsoftware.com</a></p></li>
+<li><p><a href="http://zmplicitysoftware.com/wordpressblog/">http://zmplicitysoftware.com/wordpressblog/</a></p></li>
+<li><p><a href="http://losingfight.com/blog/">http://losingfight.com/blog/</a></p></li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
