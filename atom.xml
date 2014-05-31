@@ -4,7 +4,7 @@
   <title><![CDATA[MrCloud's Blog]]></title>
   <link href="http://MrCloud.github.io/atom.xml" rel="self"/>
   <link href="http://MrCloud.github.io/"/>
-  <updated>2014-05-31T13:10:24+02:00</updated>
+  <updated>2014-05-31T14:22:21+02:00</updated>
   <id>http://MrCloud.github.io/</id>
   <author>
     <name><![CDATA[MrCloud]]></name>
@@ -27,6 +27,8 @@ for Apple platforms.</p>
 
 <ul>
 <li><a href="#language">Language</a></li>
+<li><a href="#operators">Operators</a></li>
+<li><a href="#types">Types</a></li>
 <li><a href="#code-organization">Code Organization</a></li>
 <li><a href="#spacing">Spacing</a></li>
 <li><a href="#comments">Comments</a></li>
@@ -43,8 +45,10 @@ for Apple platforms.</p>
 <li><a href="#literals">Literals</a></li>
 <li><a href="#constants">Constants</a></li>
 <li><a href="#enumerated-types">Enumerated Types</a></li>
+<li><a href="#bitmasks">Bitmasks</a></li>
 <li><a href="#case-statements">Case Statements</a></li>
 <li><a href="#private-properties">Private Properties</a></li>
+<li><a href="#image-naming">Image Naming</a></li>
 <li><a href="#booleans">Booleans</a></li>
 <li><a href="#conditionals">Conditionals</a>
 
@@ -54,16 +58,18 @@ for Apple platforms.</p>
 </li>
 <li><a href="#init-methods">Init Methods</a></li>
 <li><a href="#class-constructor-methods">Class Constructor Methods</a></li>
+<li><a href="#inheritance-super">Inheritance &amp; Super</a></li>
 <li><a href="#cgrect-functions">CGRect Functions</a></li>
 <li><a href="#golden-path">Golden Path</a></li>
-<li><a href="#error-handling">Error handling</a></li>
+<li><a href="#error-handling">Exceptions &amp; Error handling</a></li>
 <li><a href="#singletons">Singletons</a></li>
 <li><a href="#line-breaks">Line Breaks</a></li>
+<li><a href="#imports">Imports</a></li>
 <li><a href="#xcode-project">Xcode Project</a></li>
 </ul>
 
 
-<h2>Language</h2>
+<h2><a name="language"></a>Language</h2>
 
 <p>Even if I&rsquo;m French, I always use US English for code &amp; comments in order to
 maintain coherence with Cocoa and third party Framework naming.</p>
@@ -82,7 +88,7 @@ maintain coherence with Cocoa and third party Framework naming.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Operators</h2>
+<h2><a name="operators"></a>Operators</h2>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -101,7 +107,7 @@ maintain coherence with Cocoa and third party Framework naming.</p>
 be consistent with other operators. Operators separated should always be
 surrounded by spaces unless there is only one operand.</p>
 
-<h2>Types</h2>
+<h2><a name="types"></a>Types</h2>
 
 <p><code>NSInteger</code> and <code>NSUInteger</code> should be used instead of <code>int</code>, <code>long</code>, etc per
 Apple&rsquo;s best practices and 64-bit safety. <code>CGFloat</code> is preferred over <code>float</code>
@@ -116,7 +122,7 @@ it is synonymous. This is considered best practice and makes for clearer code.</
  * <a href="https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CGGeometry/Reference/reference.html#//apple_ref/doc/uid/TP30000955-CH2g-CJBBHACB">CGGeometry Reference link to CGFloat</a>
  * <a href="https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Miscellaneous/Foundation_DataTypes/Reference/reference.html">Foundation Data Types</a></p>
 
-<h2>Code Organization</h2>
+<h2><a name="code-organization"></a>Code Organization</h2>
 
 <p>Use <code>#pragma mark -</code> to categorize methods in functional groupings and
 protocol/delegate implementations following this general structure.</p>
@@ -198,7 +204,7 @@ protocol/delegate implementations following this general structure.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Spacing</h2>
+<h2><a name="spacing"></a>Spacing</h2>
 
 <ul>
 <li>I use 2 spaces indentation (can be set in Xcode Preferences).</li>
@@ -306,7 +312,7 @@ because Xcode&rsquo;s indenting makes it illegible.</li>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Comments</h2>
+<h2><a name="comments"></a>Comments</h2>
 
 <p>When they are needed, comments should be used to explain <strong>why</strong> a particular
 piece of code does something. Any comments that are used must be kept
@@ -317,7 +323,7 @@ self-documenting as possible, with only the need for intermittent, few-line
 explanations. <em>Exception: This does not apply to those comments used to
 generate documentation.</em></p>
 
-<h2>Naming</h2>
+<h2><a name="naming"></a>Naming</h2>
 
 <p>Apple naming conventions should be adhered to wherever possible, especially
 those related to <a href="https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/MemoryMgmt/Articles/MemoryMgmt.html">memory management rules</a> (<a href="http://stackoverflow.com/a/2865194/340508">NARC</a>).</p>
@@ -379,7 +385,7 @@ you have good reason.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h3>Underscores</h3>
+<h3><a name="underscores"></a>Underscores</h3>
 
 <p>When using properties, instance variables should always be accessed and
 mutated using <code>self.</code>. This means that all properties will be visually distinct,
@@ -391,7 +397,7 @@ the getters/setters.</p>
 
 <p>Local variables should not contain underscores.</p>
 
-<h2>Methods</h2>
+<h2><a name="methods"></a>Methods</h2>
 
 <p>In method signatures, there should be a space after the method type (&ndash;/+
 symbol). There should be a space between the method segments (matching Apple&rsquo;s
@@ -429,7 +435,7 @@ parameters as illustrated in the <code>initWithWidth:height:</code> example belo
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Variables</h2>
+<h2><a name="variables"></a>Variables</h2>
 
 <p>Variables should be named as descriptively as possible. Single letter variable
 names should be avoided except in <code>for()</code> loops.</p>
@@ -473,7 +479,7 @@ Accessor Methods in Initializer Methods and dealloc, see <a href="https://develo
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Property Attributes</h2>
+<h2><a name="property-attributes"></a>Property Attributes</h2>
 
 <p>Property attributes should be explicitly listed, and will help new programmers
 when reading the code. The order of properties should be storage then atomicity,
@@ -517,7 +523,7 @@ noticing that.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Dot-Notation Syntax</h2>
+<h2><a name="dot-notation-syntax"></a>Dot-Notation Syntax</h2>
 
 <p>Dot syntax is purely a convenient wrapper around accessor method calls. When you
 use dot syntax, the property is still accessed or changed using getter and
@@ -549,7 +555,7 @@ instances.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Literals</h2>
+<h2><a name="literals"></a>Literals</h2>
 
 <p><code>NSString</code>, <code>NSDictionary</code>, <code>NSArray</code>, and <code>NSNumber</code> literals should be used
 whenever creating immutable instances of those objects. Pay special care that
@@ -582,7 +588,7 @@ this will cause a crash.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Constants</h2>
+<h2><a name="constants"></a>Constants</h2>
 
 <p>Constants are preferred over in-line string literals or numbers, as they allow
 for easy reproduction of commonly used variables and can be quickly changed
@@ -611,7 +617,7 @@ constants and not <code>#define</code>s unless explicitly being used as a macro.
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Enumerated Types</h2>
+<h2><a name="enumerated-types"></a>Enumerated Types</h2>
 
 <p>When using <code>enum</code>s, it is recommended to use the new fixed underlying type
 specification because it has stronger type checking and code completion. The
@@ -667,7 +673,7 @@ CoreFoundation C code (unlikely).</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Bitmasks</h2>
+<h2><a name="bitmasks"></a>Bitmasks</h2>
 
 <p>When working with bitmasks, use the <code>NS_OPTIONS</code> macro.</p>
 
@@ -688,7 +694,7 @@ CoreFoundation C code (unlikely).</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Case Statements</h2>
+<h2><a name="case-statements"></a>Case Statements</h2>
 
 <p>Braces are not required for case statements, unless enforced by the complier (if
 you try to declare a new variable inside a case &ndash; remember that a case does not
@@ -790,7 +796,7 @@ example:</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Private Properties</h2>
+<h2><a name="private-properties"></a>Private Properties</h2>
 
 <p>Private properties should be declared in class extensions (anonymous categories)
 in the implementation file of a class. Named categories (such as <code>MRCPrivate</code> or
@@ -817,7 +823,7 @@ naming convention.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Images Naming</h2>
+<h2><a name="image-naming"></a>Image Naming</h2>
 
 <p>Image names should be named consistently to preserve organization and developer
 sanity. They should be named as one camel case string with a description of
@@ -838,7 +844,7 @@ and/or placement, and finally their state.</p>
 <p> Images that are used for a similar purpose should be grouped in respective
  groups in an Images folder.</p>
 
-<h2>Booleans</h2>
+<h2><a name="booleans"></a>Booleans</h2>
 
 <p>Objective-C uses <code>YES</code> and <code>NO</code>.  Therefore <code>true</code> and <code>false</code> should only be
 used for CoreFoundation, C or C++ code. Since <code>nil</code> resolves to <code>NO</code> it is
@@ -880,7 +886,7 @@ for example:</p>
 
 <p>Text and example taken from the <a href="https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CodingGuidelines/Articles/NamingIvarsAndTypes.html#//apple_ref/doc/uid/20001284-BAJGIIJE">Cocoa Naming Guidelines</a>.</p>
 
-<h2>Conditionals</h2>
+<h2><a name="conditionals"></a>Conditionals</h2>
 
 <p>Conditional bodies should always use braces even when a conditional body could
 be written without braces (e.g., it is one line only) to prevent errors. These
@@ -918,7 +924,7 @@ scannable.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h3>Ternary Operator</h3>
+<h3><a name="ternary-operator"></a>Ternary Operator</h3>
 
 <p>The Ternary operator, <code>?:</code> , should only be used when it increases clarity or
 code neatness. A single condition is usually all that should be evaluated.
@@ -953,7 +959,7 @@ type, then no parentheses are needed.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Init Methods</h2>
+<h2><a name="init-methods"></a>Init Methods</h2>
 
 <p>Init methods should follow the convention provided by Apple&rsquo;s generated code
 template. A return type of &lsquo;instancetype&rsquo; should also be used instead of &lsquo;id&rsquo;.</p>
@@ -965,7 +971,9 @@ template. A return type of &lsquo;instancetype&rsquo; should also be used instea
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">init</span> <span class="p">{</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">init</span>
+</span><span class='line'><span class="p">{</span>
 </span><span class='line'>  <span class="n">self</span> <span class="o">=</span> <span class="p">[</span><span class="n">super</span> <span class="n">init</span><span class="p">];</span>
 </span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="p">{</span>
 </span><span class='line'>    <span class="c1">// ...</span>
@@ -978,7 +986,7 @@ template. A return type of &lsquo;instancetype&rsquo; should also be used instea
 <p>See <a href="#class-constructor-methods">Class Constructor Methods</a> for link to article
 on instancetype.</p>
 
-<h2>Class Constructor Methods</h2>
+<h2><a name="class-constructor-methods"></a>Class Constructor Methods</h2>
 
 <p>Where class constructor methods are used, these should always return type of
 &lsquo;instancetype&rsquo; and never &lsquo;id&rsquo;. This ensures the compiler correctly infers the
@@ -995,7 +1003,39 @@ result type.</p>
 
 <p>More information on instancetype can be found on <a href="http://nshipster.com/instancetype/">NSHipster.com</a>.</p>
 
-<h2>CGRect Functions</h2>
+<h2><a name="inheritance-super"></a> Inheritance &amp; Super</h2>
+
+<p>When should you call super in an overridden method ?
+The usual rule of thumb is that when you are overriding a method that does some
+kind of initialization/setup, you should call super first and then do your
+custom stuff. And when you override some kind of teardown method, you should
+call super last.</p>
+
+<p>Setup methods are: <code>init...</code>, <code>viewWillAppear</code>, <code>viewDidAppear</code>, <code>setUp</code>.</p>
+
+<p>Teardown methods are: <code>dealloc</code>, <code>viewDidUnload</code>, <code>viewWillDisappear</code>,
+<code>tearDown</code>.</p>
+
+<p><strong>For Example:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+</span><span class='line'>  <span class="c1">// Documentation does not specify when this should be</span>
+</span><span class='line'>  <span class="c1">// called, only that it has to be called at &quot;some point&quot;</span>
+</span><span class='line'>  <span class="c1">// ...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2><a name="cgrect-functions"></a>CGRect Functions</h2>
 
 <p>When accessing the <code>x</code>, <code>y</code>, <code>width</code>, or <code>height</code> of a <code>CGRect</code>, always use the
 <a href="http://developer.apple.com/library/ios/#documentation/graphicsimaging/reference/CGGeometry/Reference/reference.html"><code>CGGeometry</code> functions</a>
@@ -1045,7 +1085,7 @@ here to manipulate rectangles and to retrieve their characteristics.</p></blockq
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Golden Path</h2>
+<h2><a name="golden-path"></a>Golden Path</h2>
 
 <p>When coding with conditionals, the left hand margin of the code should be the
 &ldquo;golden&rdquo; or &ldquo;happy&rdquo; path. That is, don&rsquo;t nest <code>if</code> statements. Multiple return
@@ -1060,7 +1100,9 @@ here to manipulate rectangles and to retrieve their characteristics.</p></blockq
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">someMethod</span> <span class="p">{</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">someMethod</span>
+</span><span class='line'><span class="p">{</span>
 </span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">[</span><span class="n">someOther</span> <span class="n">boolValue</span><span class="p">])</span> <span class="p">{</span>
 </span><span class='line'>  <span class="k">return</span><span class="p">;</span>
 </span><span class='line'>  <span class="p">}</span>
@@ -1085,7 +1127,7 @@ here to manipulate rectangles and to retrieve their characteristics.</p></blockq
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Exceptions &amp; Error handling</h2>
+<h2><a name="error-handling"></a>Exceptions &amp; Error handling</h2>
 
 <ul>
 <li>Don&rsquo;t use exceptions for flow control.</li>
@@ -1127,7 +1169,7 @@ value, not the error variable.</p></li>
 in successful cases, so switching on the error can cause false negatives (and
 subsequently crash).</p>
 
-<h2>Singletons</h2>
+<h2><a name="singletons"></a>Singletons</h2>
 
 <p>Singleton objects should use a thread-safe pattern for creating their shared
 instance.</p>
@@ -1157,7 +1199,7 @@ instance.</p>
 
 <p>This will prevent <a href="http://cocoasamurai.blogspot.com/2011/04/singletons-your-doing-them-wrong.html">possible and sometimes prolific crashes</a>.</p>
 
-<h2>Line Breaks</h2>
+<h2><a name="line-breaks"></a>Line Breaks</h2>
 
 <p>Line breaks should be applied according the 100 column rule I&rsquo;m using in Xcode
 (a column guide can be set in preferences). Pretty neat to avoid wrapping when
@@ -1180,7 +1222,7 @@ to this style guide&rsquo;s Spacing section (two spaces).</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Imports</h2>
+<h2><a name="imports"></a>Imports</h2>
 
 <p>Always use <code>@class</code> whenever possible in header files instead of <code>#import</code> since
 it has a slight compile time performance boost. (In fact the Type is know but
@@ -1200,7 +1242,7 @@ module feature from your target build settings and enable the Link Frameworks
 Automatically option to automatically import frameworks &lsquo;on-the-fly&rsquo; while using
 <code>@import</code>, this directive also reduces compiler overhead. Have a look <a href="http://stackoverflow.com/a/18947634">Here</a></p>
 
-<h2>Xcode project</h2>
+<h2><a name="xcode-project"></a>Xcode project</h2>
 
 <p>The physical files should be kept in sync with the Xcode project files in order
 to avoid file sprawl. Any Xcode groups created should be reflected by folders in
