@@ -13,6 +13,8 @@ for Apple platforms.
 ## Table of Contents
 
 * [Language](#language)
+* [Operators](#operators)
+* [Types](#types)
 * [Code Organization](#code-organization)
 * [Spacing](#spacing)
 * [Comments](#comments)
@@ -25,22 +27,26 @@ for Apple platforms.
 * [Literals](#literals)
 * [Constants](#constants)
 * [Enumerated Types](#enumerated-types)
+* [Bitmasks](#bitmasks)
 * [Case Statements](#case-statements)
 * [Private Properties](#private-properties)
+* [Image Naming](#image-naming)
 * [Booleans](#booleans)
 * [Conditionals](#conditionals)
   * [Ternary Operator](#ternary-operator)
 * [Init Methods](#init-methods)
 * [Class Constructor Methods](#class-constructor-methods)
+* [Inheritance & Super](#inheritance-super)
 * [CGRect Functions](#cgrect-functions)
 * [Golden Path](#golden-path)
-* [Error handling](#error-handling)
+* [Exceptions & Error handling](#error-handling)
 * [Singletons](#singletons)
 * [Line Breaks](#line-breaks)
+* [Imports](#imports)
 * [Xcode Project](#xcode-project)
 
 
-## Language
+## <a name="language"></a>Language
 
 Even if I'm French, I always use US English for code & comments in order to
 maintain coherence with Cocoa and third party Framework naming.
@@ -56,7 +62,7 @@ UIColor *myColor = [UIColor whiteColor];
 UIColor *myColour = [UIColor whiteColor];
 ```
 
-## Operators
+## <a name="operators"></a>Operators
 
 ```objc
 NSString *foo = @"bar";
@@ -69,7 +75,7 @@ The `++`, `--`, etc are preferred to be after the variable instead of before to
 be consistent with other operators. Operators separated should always be
 surrounded by spaces unless there is only one operand.
 
-## Types
+## <a name="types"></a>Types
 
 `NSInteger` and `NSUInteger` should be used instead of `int`, `long`, etc per
 Apple's best practices and 64-bit safety. `CGFloat` is preferred over `float`
@@ -84,7 +90,7 @@ Find more informations about these types following these links:
  * [CGGeometry Reference link to CGFloat](https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CGGeometry/Reference/reference.html#//apple_ref/doc/uid/TP30000955-CH2g-CJBBHACB)
  * [Foundation Data Types](https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Miscellaneous/Foundation_DataTypes/Reference/reference.html)
 
-## Code Organization
+## <a name="code-organization"></a>Code Organization
 
 Use `#pragma mark -` to categorize methods in functional groupings and
 protocol/delegate implementations following this general structure.
@@ -129,7 +135,7 @@ protocol/delegate implementations following this general structure.
 - (NSString *)description {}
 ```
 
-## Spacing
+## <a name="spacing"></a>Spacing
 
 * I use 2 spaces indentation (can be set in Xcode Preferences).
 * Every file ends with a newline (better diff display/scoll to end of file).
@@ -200,7 +206,7 @@ because Xcode's indenting makes it illegible.
                  }];
 ```
 
-## Comments
+## <a name="comments"></a>Comments
 
 When they are needed, comments should be used to explain **why** a particular
 piece of code does something. Any comments that are used must be kept
@@ -211,7 +217,7 @@ self-documenting as possible, with only the need for intermittent, few-line
 explanations. *Exception: This does not apply to those comments used to
 generate documentation.*
 
-## Naming
+## <a name="naming"></a>Naming
 
 Apple naming conventions should be adhered to wherever possible, especially
 those related to [memory management rules](https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/MemoryMgmt/Articles/MemoryMgmt.html) ([NARC](http://stackoverflow.com/a/2865194/340508)).
@@ -268,7 +274,7 @@ you have good reason.
 id varnm;
 ```
 
-### Underscores
+### <a name="underscores"></a>Underscores
 
 When using properties, instance variables should always be accessed and
 mutated using `self.`. This means that all properties will be visually distinct,
@@ -280,7 +286,7 @@ the getters/setters.
 
 Local variables should not contain underscores.
 
-## Methods
+## <a name="methods"></a>Methods
 
 In method signatures, there should be a space after the method type (-/+
 symbol). There should be a space between the method segments (matching Apple's
@@ -308,7 +314,7 @@ parameters as illustrated in the `initWithWidth:height:` example below.
 - (instancetype)initWith:(int)width and:(int)height;  // Never do this.
 ```
 
-## Variables
+## <a name="variables"></a>Variables
 
 Variables should be named as descriptively as possible. Single letter variable
 names should be avoided except in `for()` loops.
@@ -345,7 +351,7 @@ Accessor Methods in Initializer Methods and dealloc, see [here](https://develope
 ```
 
 
-## Property Attributes
+## <a name="property-attributes"></a>Property Attributes
 
 Property attributes should be explicitly listed, and will help new programmers
 when reading the code. The order of properties should be storage then atomicity,
@@ -383,7 +389,7 @@ noticing that.
 @property (strong, nonatomic) NSString *tutorialName;
 ```
 
-## Dot-Notation Syntax
+## <a name="dot-notation-syntax"></a>Dot-Notation Syntax
 
 Dot syntax is purely a convenient wrapper around accessor method calls. When you
 use dot syntax, the property is still accessed or changed using getter and
@@ -407,7 +413,7 @@ NSInteger arrayCount = self.array.count;
 UIApplication.sharedApplication.delegate;
 ```
 
-## Literals
+## <a name="literals"></a>Literals
 
 `NSString`, `NSDictionary`, `NSArray`, and `NSNumber` literals should be used
 whenever creating immutable instances of those objects. Pay special care that
@@ -432,7 +438,7 @@ NSNumber *shouldUseLiterals = [NSNumber numberWithBool:YES];
 NSNumber *buildingStreetNumber = [NSNumber numberWithInteger:10018];
 ```
 
-## Constants
+## <a name="constants"></a>Constants
 
 Constants are preferred over in-line string literals or numbers, as they allow
 for easy reproduction of commonly used variables and can be quickly changed
@@ -455,7 +461,7 @@ static CGFloat const kMRCImageThumbnailHeight = 50.0;
 #define thumbnailHeight 2
 ```
 
-## Enumerated Types
+## <a name="enumerated-types"></a>Enumerated Types
 
 When using `enum`s, it is recommended to use the new fixed underlying type
 specification because it has stronger type checking and code completion. The
@@ -496,7 +502,7 @@ enum GlobalConstants {
 };
 ```
 
-## Bitmasks
+## <a name="bitmasks"></a>Bitmasks
 
 When working with bitmasks, use the `NS_OPTIONS` macro.
 
@@ -511,7 +517,7 @@ typedef NS_OPTIONS(NSUInteger, MRCAdCategory) {
 };
 ```
 
-## Case Statements
+## <a name="case-statements"></a>Case Statements
 
 Braces are not required for case statements, unless enforced by the complier (if
 you try to declare a new variable inside a case - remember that a case does not
@@ -577,7 +583,7 @@ switch (menuType) {
 ```
 
 
-## Private Properties
+## <a name="private-properties"></a>Private Properties
 
 Private properties should be declared in class extensions (anonymous categories)
 in the implementation file of a class. Named categories (such as `MRCPrivate` or
@@ -597,7 +603,7 @@ naming convention.
 @end
 ```
 
-## Images Naming
+## <a name="image-naming"></a>Image Naming
 
 Image names should be named consistently to preserve organization and developer
 sanity. They should be named as one camel case string with a description of
@@ -617,7 +623,7 @@ and/or placement, and finally their state.
 
 
 
-## Booleans
+## <a name="booleans"></a>Booleans
 
 Objective-C uses `YES` and `NO`.  Therefore `true` and `false` should only be
 used for CoreFoundation, C or C++ code. Since `nil` resolves to `NO` it is
@@ -651,7 +657,7 @@ for example:
 ```
 Text and example taken from the [Cocoa Naming Guidelines](https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CodingGuidelines/Articles/NamingIvarsAndTypes.html#//apple_ref/doc/uid/20001284-BAJGIIJE).
 
-## Conditionals
+## <a name="conditionals"></a>Conditionals
 
 Conditional bodies should always use braces even when a conditional body could
 be written without braces (e.g., it is one line only) to prevent errors. These
@@ -681,7 +687,7 @@ or
 if (!error) return success;
 ```
 
-### Ternary Operator
+### <a name="ternary-operator"></a>Ternary Operator
 
 The Ternary operator, `?:` , should only be used when it increases clarity or
 code neatness. A single condition is usually all that should be evaluated.
@@ -708,13 +714,14 @@ result = isHorizontal ? x : y;
 result = a > b ? x = c > d ? c : d : y;
 ```
 
-## Init Methods
+## <a name="init-methods"></a>Init Methods
 
 Init methods should follow the convention provided by Apple's generated code
 template. A return type of 'instancetype' should also be used instead of 'id'.
 
 ```objc
-- (instancetype)init {
+- (instancetype)init
+{
   self = [super init];
   if (self) {
     // ...
@@ -726,7 +733,7 @@ template. A return type of 'instancetype' should also be used instead of 'id'.
 See [Class Constructor Methods](#class-constructor-methods) for link to article
 on instancetype.
 
-## Class Constructor Methods
+## <a name="class-constructor-methods"></a>Class Constructor Methods
 
 Where class constructor methods are used, these should always return type of
 'instancetype' and never 'id'. This ensures the compiler correctly infers the
@@ -740,7 +747,33 @@ result type.
 
 More information on instancetype can be found on [NSHipster.com](http://nshipster.com/instancetype/).
 
-## CGRect Functions
+## <a name="inheritance-super"></a> Inheritance & Super
+
+When should you call super in an overridden method ?
+The usual rule of thumb is that when you are overriding a method that does some
+kind of initialization/setup, you should call super first and then do your
+custom stuff. And when you override some kind of teardown method, you should
+call super last.
+
+Setup methods are: `init...`, `viewWillAppear`, `viewDidAppear`, `setUp`.
+
+Teardown methods are: `dealloc`, `viewDidUnload`, `viewWillDisappear`,
+`tearDown`.
+
+
+**For Example:**
+
+```objc
+- (void)viewDidLoad
+{
+  [super viewDidLoad];
+  // Documentation does not specify when this should be
+  // called, only that it has to be called at "some point"
+  // ...
+}
+```
+
+## <a name="cgrect-functions"></a>CGRect Functions
 
 When accessing the `x`, `y`, `width`, or `height` of a `CGRect`, always use the
 [`CGGeometry` functions](http://developer.apple.com/library/ios/#documentation/graphicsimaging/reference/CGGeometry/Reference/reference.html)
@@ -776,7 +809,7 @@ CGFloat height = frame.size.height;
 CGRect frame = (CGRect){ .origin = CGPointZero, .size = frame.size };
 ```
 
-## Golden Path
+## <a name="golden-path"></a>Golden Path
 
 When coding with conditionals, the left hand margin of the code should be the
 "golden" or "happy" path. That is, don't nest `if` statements. Multiple return
@@ -785,7 +818,8 @@ When coding with conditionals, the left hand margin of the code should be the
 **Preferred:**
 
 ```objc
-- (void)someMethod {
+- (void)someMethod
+{
   if (![someOther boolValue]) {
   return;
   }
@@ -804,7 +838,7 @@ When coding with conditionals, the left hand margin of the code should be the
 }
 ```
 
-## Exceptions & Error handling
+## <a name="error-handling"></a>Exceptions & Error handling
 
 * Don't use exceptions for flow control.
 * Use exceptions only to indicate programmer error.
@@ -834,7 +868,7 @@ in successful cases, so switching on the error can cause false negatives (and
 subsequently crash).
 
 
-## Singletons
+## <a name="singletons"></a>Singletons
 
 Singleton objects should use a thread-safe pattern for creating their shared
 instance.
@@ -853,7 +887,7 @@ instance.
 This will prevent [possible and sometimes prolific crashes](http://cocoasamurai.blogspot.com/2011/04/singletons-your-doing-them-wrong.html).
 
 
-## Line Breaks
+## <a name="line-breaks"></a>Line Breaks
 
 Line breaks should be applied according the 100 column rule I'm using in Xcode
 (a column guide can be set in preferences). Pretty neat to avoid wrapping when
@@ -870,7 +904,7 @@ self.productsRequest = [[SKProductsRequest alloc]
   initWithProductIdentifiers:productIdentifiers];
 ```
 
-## Imports
+## <a name="imports"></a>Imports
 
 Always use `@class` whenever possible in header files instead of `#import` since
 it has a slight compile time performance boost. (In fact the Type is know but
@@ -892,7 +926,7 @@ Automatically option to automatically import frameworks 'on-the-fly' while using
 
 
 
-## Xcode project
+## <a name="xcode-project"></a>Xcode project
 
 The physical files should be kept in sync with the Xcode project files in order
 to avoid file sprawl. Any Xcode groups created should be reflected by folders in
