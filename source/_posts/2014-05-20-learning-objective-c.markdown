@@ -31,6 +31,8 @@ Soon I'll post about coding conventions & guidelines for Objective-C/Cocoa.
   - User Experience Starting Point for iOS [[Developer Library](https://developer.apple.com/library/ios/referencelibrary/GettingStarted/GS_UserExperience_iPhone/index.html)]
 <br/>
 
+<!--more-->
+
 - Controls repository:
   - https://www.cocoacontrols.com
 <br/>
