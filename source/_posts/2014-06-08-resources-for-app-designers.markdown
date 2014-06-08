@@ -43,8 +43,10 @@ criticism and confront opinions on your and other people work.
 Try to stay up to date with trends in mobile UI/UX looking for new apps
 featured on the app stores, and great designs reviewed by critics.
 Know what already exists and is available to developers, many developers have
-tase for great design and they create and reproduce great controls available
-online, be aware of that all these resources exist !
+taste for great design, most of them have some knowledge of platform specific
+design and what are the Dos and the Don'ts (Ask them they won't bite !) and they
+create and reproduce great controls available online, be aware of that all these
+resources exist !
 
 Here are some resources that designers should be aware of when it comes to
 designing apps for Apple platforms:
