@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Resources for App Designers - A developer perspective"
+title: "Resources for App Designers - Developer Perspective"
 date: 2014-06-08 10:59:22 +0200
 comments: true
 categories: iOS Design
@@ -38,10 +38,10 @@ are a key thing, not just to make your app more lively. But it does also serve a
 role into giving the user some context & focus.
 
 Be aware of existing patterns, successful apps & controls, develop taste and
-critisism and confront opinions on your and other people work.
+criticism and confront opinions on your and other people work.
 
 Try to stay up to date with trends in mobile UI/UX looking for new apps
-features on the app stores, and great designs reviewed by critics.
+featured on the app stores, and great designs reviewed by critics.
 Know what already exists and is available to developers, many developers have
 tase for great design and they create and reproduce great controls available
 online, be aware of that all these resources exist !
@@ -53,7 +53,8 @@ designing apps for Apple platforms:
 
 <br/>
 - Videos
-  - [Design Intuitive User Experiences](https://developer.apple.com/videos/wwdc/2014/?id=211)
+  - [Design Intuitive User Experiences (WWDC Session 211)](https://developer.apple.com/videos/wwdc/2014/?id=211)
+  - Must see for Developers/Designers/Managers (Well, anyone involved in delivering the product)[Prototyping: Fake it till you make it (WWDC Session 223)](https://developer.apple.com/videos/wwdc/2014/?id=223)
   - [User Interface Design for iOS 7 Apps](https://developer.apple.com/tech-talks/videos/?id=2)
   - [What’s New in iOS User Interface Design](https://developer.apple.com/videos/wwdc/2013/?id=208)
   - [Best Practices for Great iOS UI Design](https://developer.apple.com/videos/wwdc/2013/?id=225)
@@ -72,6 +73,7 @@ designing apps for Apple platforms:
 
 - App Reviews:
   - [App.itize.us](http://app.itize.us)
+  - ... More to be added here
 <br/>
 
 
