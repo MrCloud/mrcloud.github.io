@@ -4,7 +4,7 @@
   <title><![CDATA[MrCloud's Blog]]></title>
   <link href="http://MrCloud.github.io/atom.xml" rel="self"/>
   <link href="http://MrCloud.github.io/"/>
-  <updated>2014-05-31T15:52:51+02:00</updated>
+  <updated>2014-06-08T12:58:59+02:00</updated>
   <id>http://MrCloud.github.io/</id>
   <author>
     <name><![CDATA[MrCloud]]></name>
@@ -12,6 +12,173 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Resources for App Designers - A developer perspective]]></title>
+    <link href="http://MrCloud.github.io/blog/2014/06/08/resources-for-app-designers/"/>
+    <updated>2014-06-08T10:59:22+02:00</updated>
+    <id>http://MrCloud.github.io/blog/2014/06/08/resources-for-app-designers</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been developing mobile apps for years now, many times I teamed up with
+various people to deliver a new product and most of the time a designer is
+involved.</p>
+
+<p>So I&rsquo;ve had the fortune to encounter various designer profiles, from web
+designers willing to take on the mobile market, to real UI/UX people with great
+mindset and knowledge of the specificity of mobile application User Experience.</p>
+
+<p>Unfortunately I also had to work with some designer that do not have any idea of
+what mobile application User Experience is/should be. And who would just design
+like they would do for a website or just think that design is just a façade
+without any other particular role than being beautiful and polished. They are
+all wrong. Here&rsquo;s why:</p>
+
+<!--more-->
+
+
+<p>Mobile App design is not like website design, it does require knowledge of the
+particularities of mobile platforms and moreover of which platform you&rsquo;re
+designing for. Users of each platforms (iOS &amp; Android) have different way to
+perform the same actions. And you have to care about it.</p>
+
+<p>Your design does serve a particular role in the App, the design is here to
+provide visual representation of a functionality of your app so the user can
+understand visually what he can do. Design is meant to be intuitive and to help
+the user get the job done.</p>
+
+<p>I&rsquo;ve also seen many designer just applying design on mockups and just not going
+any further. Great design is no just beautiful &ldquo;static&rdquo; interface. Animations
+are a key thing, not just to make your app more lively. But it does also serve a
+role into giving the user some context &amp; focus.</p>
+
+<p>Be aware of existing patterns, successful apps &amp; controls, develop taste and
+critisism and confront opinions on your and other people work.</p>
+
+<p>Try to stay up to date with trends in mobile UI/UX looking for new apps
+features on the app stores, and great designs reviewed by critics.
+Know what already exists and is available to developers, many developers have
+tase for great design and they create and reproduce great controls available
+online, be aware of that all these resources exist !</p>
+
+<p>Here are some resources that designers should be aware of when it comes to
+designing apps for Apple platforms:</p>
+
+<p><a href="https://developer.apple.com/design/">Apple Design Page</a></p>
+
+<br/>
+
+
+<ul>
+<li>Videos
+
+<ul>
+<li><a href="https://developer.apple.com/videos/wwdc/2014/?id=211">Design Intuitive User Experiences</a></li>
+<li><a href="https://developer.apple.com/tech-talks/videos/?id=2">User Interface Design for iOS 7 Apps</a></li>
+<li><a href="https://developer.apple.com/videos/wwdc/2013/?id=208">What’s New in iOS User Interface Design</a></li>
+<li><a href="https://developer.apple.com/videos/wwdc/2013/?id=225">Best Practices for Great iOS UI Design</a></li>
+<li><a href="https://developer.apple.com/videos/wwdc/2012/?id=243">Case Study: iPhoto Design &amp; Animations</a></li>
+</ul>
+</li>
+</ul>
+
+
+<br/>
+
+
+<ul>
+<li>Documentation
+
+<ul>
+<li>Must Read: <a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/">iOS Human Interface Guidelines</a> also available on <a href="https://itunes.apple.com/us/book/ios-human-interface-guidelines/id877942287?mt=11">iBooks</a></li>
+<li><a href="https://developer.apple.com/design/tips/">UI Design Dos and Don&#8217;ts</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/UIKitUICatalog/">UIKit User Interface Catalog</a>
+Apple catalog of existing controls &amp; interface</li>
+<li><a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/TransitionGuide/">iOS 7 UI Transition Guide</a></li>
+</ul>
+</li>
+</ul>
+
+
+<br/>
+
+
+<ul>
+<li>App Reviews:
+
+<ul>
+<li><a href="http://app.itize.us">App.itize.us</a></li>
+</ul>
+</li>
+</ul>
+
+
+<br/>
+
+
+<ul>
+<li>Third party Controls available to Developers
+
+<ul>
+<li><a href="https://www.cocoacontrols.com">Cocoa Controls</a></li>
+</ul>
+</li>
+</ul>
+
+
+<br/>
+
+
+<ul>
+<li>Principles
+
+<ul>
+<li><a href="https://medium.com/design-ux/926eb80d64e3">Transitional Interfaces</a></li>
+<li><a href="http://www.ui-transitions.com/#home">UI Transitions Principles</a></li>
+<li><a href="http://feltpresence.com/articles/18-ui-and-capability/">UI &amp; Capability</a></li>
+<li><a href="http://bokardo.com/principles-of-user-interface-design/">Principles of UI Design</a></li>
+<li><a href="http://www.youtube.com/watch?v=TMe0WnkF1Lc&amp;feature=share&amp;list=UURx1y52pfeMwbuer9Vh2u-A&amp;index=28">Pasquale D&#8217;Silva &ndash; Designing with animation</a></li>
+</ul>
+</li>
+</ul>
+
+
+<br/>
+
+
+<ul>
+<li>Curated Content
+
+<ul>
+<li><a href="http://oozled.com">Oozled</a></li>
+<li><a href="https://medium.com/design-ux">Design UX Medium</a></li>
+</ul>
+</li>
+</ul>
+
+
+<br/>
+
+
+<ul>
+<li>Case of the Hamburger Menu (aka the drawer you put your sh*t in)
+
+<ul>
+<li><a href="https://medium.com/ux-ui-design/state-of-the-hamburger-buttons-fc49797af27a">Medium</a></li>
+<li><a href="http://lmjabreu.com/post/why-and-how-to-avoid-hamburger-menus/">Why &amp; How to avoid hamburger menu ?</a></li>
+<li><a href="https://developer.apple.com/videos/wwdc/2014/?id=211">Apple on the Hamberger Menu &ndash; WWDC14 Session 211</a></li>
+</ul>
+</li>
+</ul>
+
+
+<br/>
+
+
+<p>I am aware that many of the links shared here are only available to registered
+apple developers, if you&rsquo;re a designer working with iOS/OS X developers, I
+encourage you to ask them to add you to the developer team account, so you can
+have a look at all the resources provided to you.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Objective-C Style Guide]]></title>
@@ -1331,6 +1498,11 @@ as possible. If you need to ignore a specific warning, use <a href="http://clang
 
 
 <br/>
+
+
+
+
+<!--more-->
 
 
 <ul>
