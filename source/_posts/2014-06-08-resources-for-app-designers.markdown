@@ -55,8 +55,9 @@ designing apps for Apple platforms:
 
 <br/>
 - Videos
-  - [Design Intuitive User Experiences (WWDC Session 211)](https://developer.apple.com/videos/wwdc/2014/?id=211)
-  - Must see for Developers/Designers/Managers (Well, anyone involved in delivering the product)[Prototyping: Fake it till you make it (WWDC Session 223)](https://developer.apple.com/videos/wwdc/2014/?id=223)
+  - [Design Intuitive User Experiences (WWDC14 Session 211)](https://developer.apple.com/videos/wwdc/2014/?id=211)
+  - Must see for Developers/Designers/Managers (Well, anyone involved in delivering the product)[Prototyping: Fake it till you make it (WWDC14 Session 223)](https://developer.apple.com/videos/wwdc/2014/?id=223)
+  - [Making Great First Impression with Strong Onboarding Design (WWDC14 Session 230)](https://developer.apple.com/videos/wwdc/2014/?id=230)
   - [User Interface Design for iOS 7 Apps](https://developer.apple.com/tech-talks/videos/?id=2)
   - [What’s New in iOS User Interface Design](https://developer.apple.com/videos/wwdc/2013/?id=208)
   - [Best Practices for Great iOS UI Design](https://developer.apple.com/videos/wwdc/2013/?id=225)
@@ -75,7 +76,9 @@ designing apps for Apple platforms:
 
 - App Reviews:
   - [App.itize.us](http://app.itize.us)
-  - ... More to be added here
+  - [They Make Apps](http://theymakeapps.com)
+  - [Meerli](http://iphone.meer.li/designs/featured)
+  - [Capptivate](http://capptivate.co)
 <br/>
 
 
