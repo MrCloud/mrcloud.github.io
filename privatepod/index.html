@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>privatepod - MrCloud's Blog</title>
+  <meta name="author" content="MrCloud">
+
+  
+  <meta name="description" content="Privatepod Jun 11th, 2014 Create a custom CocoaPod Requires the following: &ndash; Xcode &ndash; CocoaPods Installed with the private repo &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://MrCloud.github.io/privatepod/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="MrCloud's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-9084517-5']);
+    _gaq.push(['_setDomainName','github.io']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+  <header role="banner"><hgroup>
+  <h1><a href="/">MrCloud's Blog</a></h1>
+  
+    <h2>[self publish];</h2>
+  
+</hgroup>
+
+</header>
+  <div id="navigation">
+    <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:MrCloud.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  </div>
+  <div id="body"  >
+    <div id="main">
+      <div id="content">
+        <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Privatepod</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-11T22:51:00+02:00" pubdate data-updated="true">Jun 11<span>th</span>, 2014</time></p>
+  </header>
+  
+  <h1>Create a custom CocoaPod</h1>
+
+<p>Requires the following:
+  &ndash; Xcode
+  &ndash; CocoaPods Installed with the private repo configured
+  &ndash; A git repository for your library
+Run:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>pod lib create <span class="o">[</span>PodName<span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Create a <code>Demo</code> Xcode project for the pod in the <code>Example</code> folder</li>
+<li>Duplicate your library files to the <code>Classes</code> folder</li>
+<li>Commit and push to your Library repository:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
+</span><span class='line'>git commit -m <span class="s2">&quot;Initial Import&quot;</span>
+</span><span class='line'>git tag <span class="o">[</span>your version number here<span class="o">](</span>must match with the version in the VERSION file<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Update the <code>[PodName].podspec</code> file according to your project info
+Here is an example of working podspec file</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">Pod</span><span class="p">:</span><span class="ss">:Spec</span><span class="o">.</span><span class="n">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">s</span><span class="o">.</span><span class="n">name</span>             <span class="o">=</span> <span class="s2">&quot;DummyPod&quot;</span>
+</span><span class='line'>  <span class="n">s</span><span class="o">.</span><span class="n">version</span>          <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;VERSION&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">s</span><span class="o">.</span><span class="n">summary</span>          <span class="o">=</span> <span class="s2">&quot;An example of pod named DummyPod.&quot;</span>
+</span><span class='line'>  <span class="n">s</span><span class="o">.</span><span class="n">description</span>      <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">DESC</span>
+</span><span class='line'><span class="sh">                       A Cocoapod created as an example for documentation purpose.</span>
+</span><span class='line'><span class="no">                       DESC</span>
+</span><span class='line'>  <span class="n">s</span><span class="o">.</span><span class="n">homepage</span>         <span class="o">=</span> <span class="s2">&quot;https://github.com/MrCloud/DummyKit&quot;</span>
+</span><span class='line'>  <span class="c1"># s.screenshots      = &quot;&quot;</span>
+</span><span class='line'>  <span class="n">s</span><span class="o">.</span><span class="n">license</span>          <span class="o">=</span> <span class="s1">&#39;MIT&#39;</span>
+</span><span class='line'>  <span class="n">s</span><span class="o">.</span><span class="n">author</span>           <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;Florian PETIT&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;florianp37@me.com&quot;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="n">s</span><span class="o">.</span><span class="n">source</span>           <span class="o">=</span> <span class="p">{</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">&quot;https://github.com/MrCloud/DummyKit.git&quot;</span><span class="p">,</span> <span class="ss">:tag</span> <span class="o">=&gt;</span> <span class="n">s</span><span class="o">.</span><span class="n">version</span><span class="o">.</span><span class="n">to_s</span> <span class="p">}</span>
+</span><span class='line'>  <span class="c1"># s.social_media_url = &#39;&#39;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># s.platform     = :ios, &#39;7.0&#39;</span>
+</span><span class='line'>  <span class="c1"># s.ios.deployment_target = &#39;7.0&#39;</span>
+</span><span class='line'>  <span class="c1"># s.osx.deployment_target = &#39;10.9&#39;</span>
+</span><span class='line'>  <span class="n">s</span><span class="o">.</span><span class="n">requires_arc</span> <span class="o">=</span> <span class="kp">true</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">s</span><span class="o">.</span><span class="n">source_files</span> <span class="o">=</span> <span class="s1">&#39;Classes/**/*.{h,m}&#39;</span>
+</span><span class='line'>  <span class="c1"># s.resources = &#39;Assets/*.png&#39;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># s.ios.exclude_files = &#39;Classes/osx&#39;</span>
+</span><span class='line'>  <span class="c1"># s.osx.exclude_files = &#39;Classes/ios&#39;</span>
+</span><span class='line'>  <span class="c1"># s.public_header_files = &#39;Classes/**/*.h&#39;</span>
+</span><span class='line'>  <span class="c1"># s.frameworks = &#39;SomeFramework&#39;, &#39;AnotherFramework&#39;</span>
+</span><span class='line'>  <span class="c1"># s.dependency &#39;JSONKit&#39;, &#39;~&gt; 1.4&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Run <code>pod lib lint .</code>until you get no warning/error
+You may have an error if you have never pushed files to your library repo</li>
+<li>Commit and push to your Library repository:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
+</span><span class='line'>git commit -m <span class="s2">&quot;Initial Import&quot;</span>
+</span><span class='line'>git tag <span class="o">[</span>your version number here<span class="o">](</span>must match with the version in the podspec file<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Finally deploy to the central repo:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>pod repo push REPO_NAME <span class="o">[</span>PodName<span class="o">]</span>.podspec
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p>Optional Steps
+&ndash; cd into the <code>Example</code> folder (eventually edit the <code>Podfile</code>) then run:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>pod install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Now open your <code>.xcworkspace</code> and update your demo project or your development pods</li>
+</ul>
+
+
+<hr />
+
+<p>Update an existing pod:
+&ndash; Make your changes to your library
+&ndash; Update your <code>.podspec</code> file
+&ndash; Commit and push to your Library repository:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
+</span><span class='line'>git commit -m <span class="s2">&quot;Initial Import&quot;</span>
+</span><span class='line'>git tag <span class="o">[</span>your version number here<span class="o">](</span>must match with the version in the VERSION file<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p>Resources:</p>
+
+<p><a href="http://guides.cocoapods.org/making/making-a-cocoapod.html">http://guides.cocoapods.org/making/making-a-cocoapod.html</a></p>
+
+<p><a href="http://code.dblock.org/your-first-cocoapod">http://code.dblock.org/your-first-cocoapod</a></p>
+
+<p><a href="http://guides.cocoapods.org/making/private-cocoapods.html">http://guides.cocoapods.org/making/private-cocoapods.html</a></p>
+
+  
+    <footer>
+      <p class="meta">
+        
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-11T22:51:00+02:00" pubdate data-updated="true">Jun 11<span>th</span>, 2014</time>
+        
+      </p>
+      
+        <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://MrCloud.github.io/privatepod/index.html" data-via="Florian_MrCloud" data-counturl="http://MrCloud.github.io/privatepod/index.html" >Tweet</a>
+  
+  
+  
+</div>
+
+      
+    </footer>
+  
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/06/08/resources-for-app-designers/">Resources for App Designers - Developer Perspective</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/29/objective-c-style-guide/">Objective-C Style Guide</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/20/learning-objective-c/">Learning Objective-C</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/17/hello/">Hello, World</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+      </div>
+    </div>
+    <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - MrCloud -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>. Design by <a href="http://octopressthemes.com">Octopress Themes</a></span>
+</p>
+
+</footer>
+    
+
+<script type="text/javascript">
+      var disqus_shortname = 'mrcloudgithubio';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://MrCloud.github.io/privatepod/index.html';
+        var disqus_url = 'http://MrCloud.github.io/privatepod/index.html';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+  </div>
+</body>
+</html>
