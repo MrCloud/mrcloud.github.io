@@ -51,6 +51,8 @@ resources exist !
 Here are some resources that designers should be aware of when it comes to
 designing apps for Apple platforms:
 
+[Great Reference Article](http://iosdesign.ivomynttinen.com)
+
 [Apple Design Page](https://developer.apple.com/design/)
 
 <br/>
